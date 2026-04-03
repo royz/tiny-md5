@@ -2,6 +2,7 @@
   "name": "tiny-md5",
   "version": "0.0.1",
   "description": "",
+  "author": "Rajorshi Roy",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -18,11 +19,19 @@
   ],
   "scripts": {
     "build": "tsdown",
-    "test": "vitest run"
+    "test": "vitest run",
+    "bench": "vitest bench"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/royz/tiny-md5.git"
+  },
+  "homepage": "https://github.com/royz/tiny-md5#readme",
+  "bugs": {
+    "url": "https://github.com/royz/tiny-md5/issues"
+  },
   "packageManager": "pnpm@10.33.0",
   "devDependencies": {
     "@types/node": "^25.5.2",
