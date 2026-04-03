@@ -26,11 +26,11 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/royz/tiny-md5.git"
+    "url": "https://github.com/royz/mini-md5.git"
   },
-  "homepage": "https://github.com/royz/tiny-md5#readme",
+  "homepage": "https://github.com/royz/mini-md5#readme",
   "bugs": {
-    "url": "https://github.com/royz/tiny-md5/issues"
+    "url": "https://github.com/royz/mini-md5/issues"
   },
   "packageManager": "pnpm@10.33.0",
   "devDependencies": {

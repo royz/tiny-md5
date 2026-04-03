@@ -14,22 +14,22 @@ const UNICODE = '中文abc😀'.repeat(10);
 const OPTS = { iterations: 100_000 };
 
 describe('short string (11 bytes)', () => {
-  bench('tiny-md5', () => { md5(SHORT); }, OPTS);
+  bench('mini-md5', () => { md5(SHORT); }, OPTS);
   bench('node:crypto', () => { cryptoMd5(SHORT); }, OPTS);
 });
 
 describe('medium string (56 bytes, two-block boundary)', () => {
-  bench('tiny-md5', () => { md5(MEDIUM); }, OPTS);
+  bench('mini-md5', () => { md5(MEDIUM); }, OPTS);
   bench('node:crypto', () => { cryptoMd5(MEDIUM); }, OPTS);
 });
 
 describe('long string (1 000 bytes)', () => {
-  bench('tiny-md5', () => { md5(LONG); }, OPTS);
+  bench('mini-md5', () => { md5(LONG); }, OPTS);
   bench('node:crypto', () => { cryptoMd5(LONG); }, OPTS);
 });
 
 describe('unicode string', () => {
-  bench('tiny-md5', () => { md5(UNICODE); }, OPTS);
+  bench('mini-md5', () => { md5(UNICODE); }, OPTS);
   bench('node:crypto', () => { cryptoMd5(UNICODE); }, OPTS);
 });
 

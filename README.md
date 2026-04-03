@@ -1,4 +1,4 @@
-# tiny-md5
+# mini-md5
 
 A minimal MD5 hash function built for the browser. Computes an MD5 hex digest from a UTF-8 string.
 
@@ -7,13 +7,13 @@ A minimal MD5 hash function built for the browser. Computes an MD5 hex digest fr
 ## Install
 
 ```sh
-pnpm install tiny-md5
+pnpm install mini-md5
 ```
 
 ## Usage
 
 ```ts
-import md5 from 'tiny-md5';
+import md5 from 'mini-md5';
 
 md5('hello'); // '5d41402abc4b2a76b9719d911017c592'
 ```
@@ -41,16 +41,16 @@ pnpm test
 
 ## Benchmarks
 
-Compared against Node's built-in `node:crypto` MD5 (native C++). tiny-md5 is a pure-JS implementation, so it trades some speed for zero dependencies and a tiny bundle footprint.
+Compared against Node's built-in `node:crypto` MD5 (native C++). mini-md5 is a pure-JS implementation, so it trades some speed for zero dependencies and a tiny bundle footprint.
 
-| Input | tiny-md5 | node:crypto | ratio |
+| Input | mini-md5 | node:crypto | ratio |
 |---|---|---|---|
 | Short — 11 bytes | ~1 004 000 ops/s | ~1 062 000 ops/s | **on par** (1.06×) |
 | Medium — 56 bytes (two-block boundary) | ~609 000 ops/s | ~967 000 ops/s | 1.59× slower |
 | Long — 1 000 bytes | ~93 000 ops/s | ~540 000 ops/s | 5.82× slower |
 | Unicode — mixed multi-byte | ~337 000 ops/s | ~860 000 ops/s | 2.55× slower |
 
-> For short strings (the common browser use-case) tiny-md5 matches `node:crypto` throughput. The gap widens for longer inputs because native crypto amortises its fixed overhead more efficiently.
+> For short strings (the common browser use-case) mini-md5 matches `node:crypto` throughput. The gap widens for longer inputs because native crypto amortises its fixed overhead more efficiently.
 
 Run with:
 
